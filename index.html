@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammarly't - Write Worse, Feel Better</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">G</span>
+                <span class="logo-text">Grammarly't</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#editor">Editor</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#premium">Premium</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#editor">Editor</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#premium">Premium</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+    </div>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch-headline" data-text="Write better.">Write better.</h1>
+            <p class="hero-subtitle">The grammar assistant that's always wrong, but never in doubt.</p>
+            
+            <div class="cta-container">
+                <button class="cta-btn escaping-btn" id="escapingBtn">
+                    Get Grammarly't Free
+                </button>
+                <p class="cta-note">*Button may have commitment issues</p>
+            </div>
+
+            <div class="loading-container">
+                <p class="loading-text">Loading your potential...</p>
+                <div class="loading-bar">
+                    <div class="loading-progress" id="loadingProgress"></div>
+                </div>
+                <p class="loading-percent"><span id="loadingPercent">0</span>%</p>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="fake-editor-preview">
+                <div class="preview-header">
+                    <span class="preview-dot red"></span>
+                    <span class="preview-dot yellow"></span>
+                    <span class="preview-dot green"></span>
+                </div>
+                <div class="preview-content">
+                    <p>Their going to <span class="underline-wrong">the</span> store.</p>
+                    <p class="suggestion">✓ Perfect grammar detected!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDITOR SECTION -->
+    <section id="editor" class="editor-section">
+        <div class="container">
+            <h2>The Editer</h2>
+            <p class="section-subtitle">Type anything. We'll make it worse.</p>
+
+            <div class="editor-wrapper">
+                <div class="editor-main">
+                    <textarea id="userInput" placeholder="Start typing... if you dare."></textarea>
+                    <div class="editor-output" id="editorOutput">
+                        <p class="placeholder-text">Your "improved" text will appear here...</p>
+                    </div>
+                </div>
+
+                <div class="editor-sidebar">
+                    <div class="score-card">
+                        <div class="score-circle">
+                            <span id="grammarScore">??</span>
+                        </div>
+                        <p>Grammar Score</p>
+                        <p class="score-note">(Out of... something)</p>
+                    </div>
+
+                    <div class="suggestions-panel">
+                        <h4>Suggestions</h4>
+                        <div id="suggestionsList">
+                            <p class="no-suggestions">Waiting for your mistakes...</p>
+                        </div>
+                    </div>
+
+                    <div class="editor-buttons">
+                        <button class="editor-btn make-worse" id="makeWorseBtn">
+                            <i class="fas fa-fire"></i> Make It Worse
+                        </button>
+                        <button class="editor-btn gaslight" id="gaslightBtn">
+                            <i class="fas fa-brain"></i> Gaslight Me
+                        </button>
+                        <button class="editor-btn ignore" id="ignoreBtn">
+                            <i class="fas fa-eye-slash"></i> Ignore All
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="api-status">
+                <span class="status-dot"></span>
+                <span id="apiStatus">Checking connection...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US SECTION -->
+    <section id="why-us" class="why-us-section">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p class="section-subtitle">Reasons that definitely make sense</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon wrong">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <h3>Accuracy</h3>
+                    <p>We checked. We're not accurate. Moving on.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon wrong">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <h3>Reliability</h3>
+                    <p>Sometimes we work. Sometimes we don't. It's exciting!</p>
+                </div>
+
+                <div class="feature-card highlight">
+                    <div class="feature-icon right">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>Confidence</h3>
+                    <p>We're ALWAYS confident. Even when wrong. Especially when wrong.</p>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="127">0</span>
+                    <span class="stat-percent">%</span>
+                    <p>More wrong suggestions</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-suffix"></span>
+                    <p>Guy trusts us</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="847">0</span>
+                    <span class="stat-suffix">M</span>
+                    <p>Accidental users worldwide</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="0">0</span>
+                    <span class="stat-suffix"></span>
+                    <p>Complaints resolved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM SECTION -->
+    <section id="premium" class="premium-section">
+        <div class="container">
+            <h2>Go Premium</h2>
+            <p class="section-subtitle">Pay us to make things worse, faster</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-badge">Free</div>
+                    <h3>Basic Chaos</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">0</span>
+                        <span class="period">/forever</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Ruins 1 sentence per day</li>
+                        <li><i class="fas fa-check"></i> Random underlines</li>
+                        <li><i class="fas fa-check"></i> Passive-aggressive suggestions</li>
+                        <li><i class="fas fa-times"></i> No support (we don't know either)</li>
+                    </ul>
+                    <button class="plan-btn">Stay Free</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="plan-badge popular">Most Regretted</div>
+                    <h3>Pro</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">12</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Ruins UNLIMITED sentences</li>
+                        <li><i class="fas fa-check"></i> Faster wrong suggestions</li>
+                        <li><i class="fas fa-check"></i> Gaslighting mode</li>
+                        <li><i class="fas fa-check"></i> Makes you doubt reality</li>
+                    </ul>
+                    <button class="plan-btn featured-btn" id="subscribeBtn">Accidentally Subscribe</button>
+                </div>
+
+                <div class="pricing-card ultra">
+                    <div class="plan-badge">Ultra Pro Max</div>
+                    <h3>Personal Insults</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Everything in Pro</li>
+                        <li><i class="fas fa-check"></i> We insult you personally</li>
+                        <li><i class="fas fa-check"></i> Judges your life choices</li>
+                        <li><i class="fas fa-check"></i> Tells your mom about typos</li>
+                    </ul>
+                    <button class="plan-btn ultra-btn">Seek Help Instead</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2>What People Say</h2>
+            <p class="section-subtitle">Totally real, definitely not fake reviews</p>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">"I used to write good. Now I don't. Thanks Grammarly't!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">JD</div>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">John Definitely-Real</span>
+                            <span class="reviewer-title">Certified Word User</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"My boss fired me after using this. 10/10 would recommend for enemies."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">SK</div>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">Sarah K.</span>
+                            <span class="reviewer-title">Formerly Employed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="review-text">"this is the worsted thing i ever use. it make my english more bad."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">AM</div>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">A. Mistake</span>
+                            <span class="reviewer-title">English "Expert"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"I clicked 'Ignore All' and my life improved 200%. Thanks for the option!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">TC</div>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">Tim C.</span>
+                            <span class="reviewer-title">Professional Ignorer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">G</span>
+                    <span class="logo-text">Grammarly't</span>
+                    <p>Confidently ruining your writing since just now.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#">Chaos Engine</a>
+                        <a href="#">Wrong Suggestions</a>
+                        <a href="#">Gaslight Mode</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About (We Don't Know)</a>
+                        <a href="#">Careers (None)</a>
+                        <a href="#">Contact (Don't)</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy (Lol)</a>
+                        <a href="#">Terms (Unread)</a>
+                        <a href="#">Cookies (Yum)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Grammarly't. All wrongs reserved.</p>
+                <p class="disclaimer">Not affiliated with Grammarly. They write good. We don't.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage">Message here</span>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
